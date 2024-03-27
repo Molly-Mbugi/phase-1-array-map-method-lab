@@ -12,5 +12,13 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map(tutorial => {
+    return tutorial.replace(/\b\w/g, match => match.toUpperCase());
+  });
+};
+
+module.exports = {
+  titleCased
+};
+
+
